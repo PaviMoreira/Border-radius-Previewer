@@ -1,31 +1,39 @@
 <head>
-    <style>
-        .centerPosition {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        #roundCorners {
-            border-radius: 25% 25% 25% 25%;
-            background: url(https://media1.tenor.com/m/Jc9jT66AJRwAAAAd/chipi-chipi-chapa-chapa.gif);
-            padding: 20px;
-            width: 200px;
-            height: 150px;
-        }
-    </style>
+    <link rel='stylesheet' type='text/css' href='styles/Border-radius Previewer.css'>
+    <script type="text/javascript" src="src/Border-radius Previewer.js"></script>
+    <meta charset="utf-8">
+    <title>Border-radius Previewer</title>
 </head>
 
 <body>
+
+    <header class="title">
+        <h2>Border Radius goes boom boom</h2>
+    </header>
+
     <div id="roundCorners" class="centerPosition">
     </div>
-    <button onClick="document.getElementById('roundCorners').style.webkitBorderTopLeftRadius = '0%';"
-        class="centerPosition" style="top :40%;left: 40%">Top left corner</button>
-    <button onClick="document.getElementById('roundCorners').style.webkitBorderTopRightRadius = '0%';"
-        class="centerPosition" style="top :40%;left: 60%">Top right corner</button>
-    <button onClick="document.getElementById('roundCorners').style.webkitBorderBottomLeftRadius = '0%'"
-        class="centerPosition" style="top :60%;left: 40%">Bottom left corner</button>
-    <button onClick="document.getElementById('roundCorners').style.webkitBorderBottomRightRadius = '0%';"
-        class="centerPosition" style="top :60%;left: 60%">Bottom right corner</button>
+
+    <div id="slideContainerUp">
+        <input type="range" min="0" max="100" value="100" class="slider" step="1" oninput="topRadiusFunciton(this.value)">
+    </div>
+
+    <div id="slideContainerLeft">
+        <input type="range" min="0" max="100" value="100" class="slider" step="1"
+            oninput="leftRadiusFunciton(this.value)">
+    </div>
+
+    <div id="slideContainerDown">
+        <input type="range" min="0" max="100" value="0" class="slider" step="1" oninput="botRadiusFunciton(this.value)">
+    </div>
+
+    <div id="slideContainerRight">
+        <input type="range" min="0" max="100" value="0" class="slider" step="1"
+            oninput="rightRadiusFunciton(this.value)">
+    </div>
+
+    <footer class="footer">
+        Made by 
+        <a href="https://github.com/PaviMoreira" target="_blank">Pavi</a>
+    </footer>
 </body>

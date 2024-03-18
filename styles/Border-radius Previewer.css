@@ -1,0 +1,115 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+body {
+    background-color: rgb(15, 0, 13);
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding-bottom: 2rem;
+    padding-top: 10rem;
+}
+
+.title {
+    color: #fff9;
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    font-size: .875rem;
+    line-height: 1.2rem;
+    color: #fff9;
+    background: rgba(255, 255, 255, .05);
+    min-height: 2rem;
+    text-align: center;
+    padding: 0.4rem 0;
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+}
+
+.centerPosition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#roundCorners {
+    border-radius: 0;
+    background: url('https://media1.tenor.com/m/Jc9jT66AJRwAAAAd/chipi-chipi-chapa-chapa.gif');
+    padding: 20px;
+    width: 190px;
+    height: 190px;
+}
+
+#slideContainerUp {
+    width: 25%;
+    position: absolute;
+    top: 35%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+}
+
+#slideContainerDown {
+    width: 25%;
+    position: absolute;
+    top: 65%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+}
+
+#slideContainerLeft {
+    width: 25%;
+    position: absolute;
+    top: 39%;
+    left: 42%;
+    transform: translate(-50%, -50%) rotate(270deg);
+}
+
+#slideContainerRight {
+    width: 25%;
+    position: absolute;
+    top: 39%;
+    left: 58%;
+    transform: translate(-50%, -50%) rotate(270deg);
+}
+
+
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    height: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    cursor: pointer;
+
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #63044e;
+    cursor: pointer;
+
+}
